@@ -1,0 +1,56 @@
+{
+    "sellos_discograficos": [
+      {
+        "id": 1,
+        "nombre": "Sello1",
+        "artistas": [
+          {
+            "id": 101,
+            "nombre": "Artista1",
+            "canciones": [
+              {
+                "id": 1001,
+                "nombre": "Cancion1",
+                "fecha": "2023-01-15",
+                "duracion": "3:30"
+              },
+              {
+                "id": 1002,
+                "nombre": "Cancion2",
+                "fecha": "2023-02-20",
+                "duracion": "4:15"
+              }
+            ],
+            "albumes": [
+              {
+                "id": 201,
+                "nombre": "Album1",
+                "fecha_publicacion": "2023-01-01",
+                "canciones": [1001, 1002]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "nombre": "Sello2",
+        "artistas": [
+          {
+            "id": 102,
+            "nombre": "Artista2",
+            "canciones": [
+              {
+                "id": 1003,
+                "nombre": "Cancion3",
+                "fecha": "2023-03-10",
+                "duracion": "5:00"
+              }
+            ],
+            "albumes": []
+          }
+        ]
+      }
+    ]
+  }
+  
