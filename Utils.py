@@ -170,11 +170,11 @@ class Utils:
     def listar_generos():
         datos = Utils.cargar_datos()
         if datos:
-            generos = set()  # Utilizamos un conjunto para almacenar géneros únicos
+            generos = set()  
             for sello in datos['label']:
                 for artista in sello['artist']:
                     for cancion in artista['songs']:
-                        generos.add(cancion['genre'])  # Agregamos el género al conjunto
+                        generos.add(cancion['gender']) 
 
             if generos:
                 print("Géneros presentes en el JSON:")
