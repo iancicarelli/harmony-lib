@@ -1,6 +1,6 @@
 class Album:
-    def __init__(self, id, nombre, fecha_publicacion):
+    def __init__(self, id, name, publish_date):
         self.id = id
-        self.nombre = nombre
-        self.fecha_publicacion = fecha_publicacion
-        self.canciones = []
+        self.name = name
+        self.publish_date = publish_date
+        self.songs = []
