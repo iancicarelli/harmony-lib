@@ -1,5 +1,6 @@
 import json
 
+
 class Utils:
     @staticmethod
     def cargar_datos():
@@ -11,14 +12,15 @@ class Utils:
             print("El archivo no se encontró.")
             return None
 
+
     @staticmethod
     def mostrar_artistas():
         datos = Utils.cargar_datos()
         if datos:
             artistas = []
-            for sello in datos['sellos_discograficos']:
-                for artista in sello['artistas']:
-                    artistas.append(artista['nombre'])
+            for sello in datos['label']:
+                for artista in sello['artist']:
+                    artistas.append(artista['name'])
             if artistas:
                 print("Los artistas presentes en el JSON son:")
                 for i, artista in enumerate(artistas, start=1):
@@ -38,17 +40,17 @@ class Utils:
         if datos and artistas:
             if 1 <= numero_artista <= len(artistas):
                 artista_seleccionado = artistas[numero_artista - 1]
-                for sello in datos['sellos_discograficos']:
-                    for artista in sello['artistas']:
-                        if artista['nombre'] == artista_seleccionado:
-                            print(f"Datos del artista '{artista['nombre']}':")
+                for sello in datos['label']:
+                    for artista in sello['artist']:
+                        if artista['name'] == artista_seleccionado:
+                            print(f"Datos del artista '{artista['name']}':")
                             print(f"ID: {artista['id']}")
-                            print("Canciones:")
-                            for cancion in artista['canciones']:
-                                print(f"- {cancion['nombre']}")
+                            print("songs:")
+                            for cancion in artista['songs']:
+                                print(f"- {cancion['name']}")
                             print("Álbumes:")
-                            for album in artista.get('albumes', []):
-                                print(f"- {album['nombre']} ({album['fecha_publicacion']})")
+                            for album in artista.get('album', []):
+                                print(f"- {album['name']} ({album['publish_date']})")
                             return
                 print("El artista seleccionado no fue encontrado.")
             else:
@@ -61,10 +63,10 @@ class Utils:
         datos = Utils.cargar_datos()
         if datos:
             albums = []
-            for sello in datos['sellos_discograficos']:
-                for artista in sello['artistas']:
-                    for album in artista.get('albumes', []):
-                        albums.append(album['nombre'])
+            for sello in datos['label']:
+                for artista in sello['artist']:
+                    for album in artista.get('album', []):
+                        albums.append(album['name'])
             if albums:
                 print("Los álbumes presentes en el JSON son:")
                 for album in albums:
@@ -81,12 +83,12 @@ class Utils:
         if datos and artistas:
             if 1 <= numero_artista <= len(artistas):
                 artista_seleccionado = artistas[numero_artista - 1]
-                for sello in datos['sellos_discograficos']:
-                    for artista in sello['artistas']:
-                        if artista['nombre'] == artista_seleccionado:
-                            print(f"Canciones del artista '{artista['nombre']}':")
-                            for cancion in artista['canciones']:
-                                print(f"- {cancion['nombre']} ({cancion['fecha']}) - Duración: {cancion['duracion']}")
+                for sello in datos['label']:
+                    for artista in sello['artist']:
+                        if artista['name'] == artista_seleccionado:
+                            print(f"Canciones del artista '{artista['name']}':")
+                            for cancion in artista['songs']:
+                                print(f"- {cancion['name']} ({cancion['date']}) - duracion: {cancion['duration']}")
                             return
                 print("El artista seleccionado no fue encontrado.")
             else:
@@ -101,15 +103,15 @@ class Utils:
         if datos and artistas:
             if 1 <= numero_artista <= len(artistas):
                 artista_seleccionado = artistas[numero_artista - 1]
-                for sello in datos['sellos_discograficos']:
-                    for artista in sello['artistas']:
-                        if artista['nombre'] == artista_seleccionado:
-                            if 'albumes' in artista and artista['albumes']:
-                                print(f"Álbumes del artista '{artista['nombre']}':")
-                                for album in artista['albumes']:
-                                    print(f"- {album['nombre']} ({album['fecha_publicacion']})")
+                for sello in datos['label']:
+                    for artista in sello['artist']:
+                        if artista['name'] == artista_seleccionado:
+                            if 'album' in artista and artista['album']:
+                                print(f"Álbumes del artista '{artista['name']}':")
+                                for album in artista['album']:
+                                    print(f"- {album['name']} ({album['publish_date']})")
                             else:
-                                print(f"No se encontraron álbumes para el artista '{artista['nombre']}'.")
+                                print(f"No se encontraron álbumes para el artista '{artista['name']}'.")
                             return
                 print("El artista seleccionado no fue encontrado.")
             else:
@@ -122,9 +124,9 @@ class Utils:
         datos = Utils.cargar_datos()
         if datos:
             artistas = []
-            for sello in datos['sellos_discograficos']:
-                for artista in sello['artistas']:
-                    artistas.append(artista['nombre'])
+            for sello in datos['label']:
+                for artista in sello['artist']:
+                    artistas.append(artista['name'])
             if artistas:
                 return artistas
             else:
@@ -157,7 +159,7 @@ class Utils:
                 Utils.mostrar_albums_artista(num_artista)
             elif opcion =='3':
                  Utils.listar_generos()
-                    
+
             elif opcion == '0':
                 print("Saliendo del menú.")
                 break
@@ -169,10 +171,10 @@ class Utils:
         datos = Utils.cargar_datos()
         if datos:
             generos = set()  # Utilizamos un conjunto para almacenar géneros únicos
-            for sello in datos['sellos_discograficos']:
-                for artista in sello['artistas']:
-                    for cancion in artista['canciones']:
-                        generos.add(cancion['genero'])  # Agregamos el género al conjunto
+            for sello in datos['label']:
+                for artista in sello['artist']:
+                    for cancion in artista['songs']:
+                        generos.add(cancion['genre'])  # Agregamos el género al conjunto
 
             if generos:
                 print("Géneros presentes en el JSON:")

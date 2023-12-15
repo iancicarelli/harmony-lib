@@ -1,34 +1,34 @@
 {
-  "sellos_discograficos": [
+  "label": [
     {
       "id": 1,
-      "nombre": "Sello1",
-      "artistas": [
+      "name": "Sello1",
+      "artist": [
         {
           "id": 101,
-          "nombre": "Artista1",
-          "canciones": [
+          "name": "Artista1",
+          "songs": [
             {
               "id": 1001,
-              "nombre": "Cancion1",
-              "genero": "Electronica",
-              "fecha": "2023-01-15",
-              "duracion": "3:30"
+              "name": "Cancion1",
+              "gender": "Electronica",
+              "date": "2023-01-15",
+              "duration": "3:30"
             },
             {
               "id": 1002,
-              "nombre": "Cancion2",
-              "genero": "Electronica",
-              "fecha": "2023-02-20",
-              "duracion": "4:15"
+              "name": "Cancion2",
+              "gender": "Electronica",
+              "date": "2023-02-20",
+              "duration": "4:15"
             }
           ],
-          "albumes": [
+          "album": [
             {
               "id": 201,
-              "nombre": "Album1",
-              "fecha_publicacion": "2023-01-01",
-              "canciones": [1001, 1002]
+              "name": "Album1",
+              "publish_date": "2023-01-01",
+              "songs": [1001, 1002]
             }
           ]
         }
@@ -36,76 +36,76 @@
     },
     {
       "id": 2,
-      "nombre": "Sello2",
-      "artistas": [
+      "name": "Sello2",
+      "artist": [
         {
           "id": 102,
-          "nombre": "Artista2",
-          "canciones": [
+          "name": "Artista2",
+          "songs": [
             {
               "id": 1003,
-              "nombre": "Cancion3",
-              "genero": "Electronica",
-              "fecha": "2023-03-10",
-              "duracion": "5:00"
+              "name": "Cancion3",
+              "gender": "Electronica",
+              "date": "2023-03-10",
+              "duration": "5:00"
             }
           ],
-          "albumes": []
+          "album": []
         }
       ]
     },
     {
       "id": 3,
-      "nombre": "Selloo1",
-      "artistas": [
+      "name": "Selloo1",
+      "artist": [
         {
           "id": 1031,
-          "nombre": "Artista31",
-          "canciones": [
+          "name": "Artista31",
+          "songs": [
             {
               "id": 12001,
-              "nombre": "Canciond1",
-              "genero": "Rock",
-              "fecha": "2023-01-15",
-              "duracion": "3:30"
+              "name": "Canciond1",
+              "gender": "Rock",
+              "date": "2023-01-15",
+              "duration": "3:30"
             },
             {
               "id": 10202,
-              "nombre": "Cancions2",
-              "genero": "Rock",
-              "fecha": "2023-02-20",
-              "duracion": "4:15"
+              "name": "Cancions2",
+              "gender": "Rock",
+              "date": "2023-02-20",
+              "duration": "4:15"
             },
             {
               "id": 10304,
-              "nombre": "Cancioon4",
-              "genero": "Rock",
-              "fecha": "2023-04-05",
-              "duracion": "4:45"
+              "name": "Cancioon4",
+              "gender": "Rock",
+              "date": "2023-04-05",
+              "duration": "4:45"
             }
           ],
-          "albumes": [
+          "album": [
             {
               "id": 202,
-              "nombre": "Album12",
-              "fecha_publicacion": "2023-01-01",
-              "canciones": [12001, 10202, 10304]
+              "name": "Album12",
+              "publish_date": "2023-01-01",
+              "songs": [12001, 10202, 10304]
             }
           ]
         },
         {
           "id": 1033,
-          "nombre": "Artista3",
-          "canciones": [
+          "name": "Artista3",
+          "songs": [
             {
               "id": 1005,
-              "nombre": "Cancion5",
-              "genero": "Pop",
-              "fecha": "2023-05-20",
-              "duracion": "3:55"
+              "name": "Cancion5",
+              "gender": "Pop",
+              "date": "2023-05-20",
+              "duration": "3:55"
             }
           ],
-          "albumes": []
+          "album": []
         }
       ]
     }
