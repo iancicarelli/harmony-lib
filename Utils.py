@@ -142,6 +142,7 @@ class Utils:
             print("Menú:")
             print("1. Ver las canciones de un artista")
             print("2. Ver los álbumes de un artista")
+            print("3. Ver generos musicales")
             print("0. Salir")
             
             opcion = input("Ingrese el número de la opción que desea: ")
@@ -154,8 +155,30 @@ class Utils:
                 Utils.mostrar_artistas()
                 num_artista = int(input("Seleccione el número para ver los álbumes del artista: "))
                 Utils.mostrar_albums_artista(num_artista)
+            elif opcion =='3':
+                 Utils.listar_generos()
+                    
             elif opcion == '0':
                 print("Saliendo del menú.")
                 break
             else:
                 print("Opción no válida. Ingrese un número válido de opción.")
+
+    @staticmethod
+    def listar_generos():
+        datos = Utils.cargar_datos()
+        if datos:
+            generos = set()  # Utilizamos un conjunto para almacenar géneros únicos
+            for sello in datos['sellos_discograficos']:
+                for artista in sello['artistas']:
+                    for cancion in artista['canciones']:
+                        generos.add(cancion['genero'])  # Agregamos el género al conjunto
+
+            if generos:
+                print("Géneros presentes en el JSON:")
+                for genero in generos:
+                    print(f"- {genero}")
+            else:
+                print("No se encontraron géneros.")
+        else:
+            print("No se pudieron cargar los datos.")                
