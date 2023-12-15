@@ -50,7 +50,81 @@
             "albumes": []
           }
         ]
+      },
+      {
+        "id": 3,
+        "nombre": "Selloo1",
+        "artistas": [
+          {
+            "id": 1031,
+            "nombre": "Artista31",
+            "genero": "Rock",
+            "canciones": [
+              {
+                "id": 12001,
+                "nombre": "Canciond1",
+                "fecha": "2023-01-15",
+                "duracion": "3:30"
+              },
+              {
+                "id": 10202,
+                "nombre": "Cancions2",
+                "fecha": "2023-02-20",
+                "duracion": "4:15"
+              },
+              {
+                "id": 10304,
+                "nombre": "Cancioon4",
+                "fecha": "2023-04-05",
+                "duracion": "4:45"
+              }
+            ],
+            "albumes": [
+              {
+                "id": 201,
+                "nombre": "Album12",
+                "fecha_publicacion": "2023-01-01",
+                "canciones": [1001, 1002, 1004]
+              }
+            ]
+          },
+          {
+            "id": 1033,
+            "nombre": "Artista3",
+            "genero": "Pop",
+            "canciones": [
+              {
+                "id": 1005,
+                "nombre": "Cancion5",
+                "fecha": "2023-05-20",
+                "duracion": "3:55"
+              }
+            ],
+            "albumes": []
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "nombre": "Sello5",
+        "artistas": [
+          {
+            "id": 102,
+            "nombre": "Artista2",
+            "genero": "Electrónica",
+            "canciones": [
+              {
+                "id": 1003,
+                "nombre": "Cancion3",
+                "fecha": "2023-03-10",
+                "duracion": "5:00"
+              }
+            ],
+            "albumes": []
+          }
+        ]
       }
+
     ]
   }
   
